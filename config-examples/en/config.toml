@@ -1288,6 +1288,9 @@ uglyURLs = false
     # top level section only?
     postNavInSection = true
 
+    # Open post links in a new browser tab/window.
+    openPostsInNewTab = false
+
 
     ######################################
     # Minimal Footer

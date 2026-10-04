@@ -15,13 +15,13 @@
     <ul class="list-posts">
         {{ range $pages }}
             <li>
-                <a href="{{ .RelPermalink }}" class="category-post">{{ (partial "utils/title.html" (dict "$" . "title" .LinkTitle)).htmlTitle }}</a>
+                <a href="{{ .RelPermalink }}" class="category-post"{{ if .Site.Params.openPostsInNewTab }} target="_blank" rel="noopener"{{ end }}>{{ (partial "utils/title.html" (dict "$" . "title" .LinkTitle)).htmlTitle }}</a>
             </li>
         {{ end }}
         {{ if and (gt $limit 0) (gt (len $rawPages) $limit) }}
             {{ with $linkTarget }}
                 <li>
-                    <a href="{{ $linkTarget.RelPermalink }}" class="category-post more">{{ i18n "readMore" }} »</a>
+                    <a href="{{ $linkTarget.RelPermalink }}" class="category-post more"{{ if $linkTarget.Site.Params.openPostsInNewTab }} target="_blank" rel="noopener"{{ end }}>{{ i18n "readMore" }} »</a>
                 </li>
             {{ end }}
         {{ end }}

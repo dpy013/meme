@@ -1238,6 +1238,9 @@ uglyURLs = false
     # 是否仅限于相同的文章分区
     postNavInSection = true
 
+    # Open post links in a new browser tab/window.
+    openPostsInNewTab = false
+
 
     ######################################
     # 极简页脚

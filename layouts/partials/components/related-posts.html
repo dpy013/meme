@@ -6,7 +6,7 @@
             <ul class="related-list">
                 {{ range . }}
                     <li class="related-item">
-                        <a href="{{ .RelPermalink }}" class="related-link"{{ if $.Site.Params.enableKeyboardShortcuts }} data-shortcut="z"{{ end }}>{{ (partial "utils/title.html" (dict "$" . "title" .LinkTitle)).htmlTitle }}</a>
+                        <a href="{{ .RelPermalink }}" class="related-link"{{ if $.Site.Params.openPostsInNewTab }} target="_blank" rel="noopener"{{ end }}{{ if $.Site.Params.enableKeyboardShortcuts }} data-shortcut="z"{{ end }}>{{ (partial "utils/title.html" (dict "$" . "title" .LinkTitle)).htmlTitle }}</a>
                     </li>
                 {{ end }}
             </ul>

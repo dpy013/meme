@@ -14,14 +14,14 @@
     <ul class="list-part">
         {{ range . }}
             <li class="list-item">
-                <a href="{{ .RelPermalink }}" class="list-item-title">{{ (partial "utils/title.html" (dict "$" . "title" .LinkTitle)).htmlTitle }}</a>
+                <a href="{{ .RelPermalink }}" class="list-item-title"{{ if .Site.Params.openPostsInNewTab }} target="_blank" rel="noopener"{{ end }}>{{ (partial "utils/title.html" (dict "$" . "title" .LinkTitle)).htmlTitle }}</a>
                 <time datetime="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" }}" class="list-item-time">{{ .PublishDate.Format .Site.Params.listDateFormat }}</time>
             </li>
         {{ end }}
         {{ if and (gt $limit 0) (gt (len $.Pages) $limit) }}
             {{ with $linkTarget }}
                 <li class="list-read-more">
-                    <a href="{{ $linkTarget.RelPermalink }}">{{ i18n "readMore" }} »</a>
+                    <a href="{{ $linkTarget.RelPermalink }}"{{ if $linkTarget.Site.Params.openPostsInNewTab }} target="_blank" rel="noopener"{{ end }}>{{ i18n "readMore" }} »</a>
                 </li>
             {{ end }}
         {{ end }}

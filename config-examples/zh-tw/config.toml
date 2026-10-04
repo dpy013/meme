@@ -1238,6 +1238,9 @@ uglyURLs = false
     # 是否僅限於相同的文章分割槽
     postNavInSection = true
 
+    # Open post links in a new browser tab/window.
+    openPostsInNewTab = false
+
 
     ######################################
     # 極簡頁尾

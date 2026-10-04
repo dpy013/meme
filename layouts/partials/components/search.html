@@ -10,10 +10,10 @@
 
 <template id="search-result" hidden>
     <article class="content post">
-        <h2 class="post-title"><a class="summary-title-link"></a></h2>
+        <h2 class="post-title"><a class="summary-title-link"{{ if $.Site.Params.openPostsInNewTab }} target="_blank" rel="noopener"{{ end }}></a></h2>
         <summary class="summary"></summary>
         <div class="read-more-container">
-            <a class="read-more-link">{{ i18n "readMore" }} »</a>
+            <a class="read-more-link"{{ if $.Site.Params.openPostsInNewTab }} target="_blank" rel="noopener"{{ end }}>{{ i18n "readMore" }} »</a>
         </div>
     </article>
 </template>
