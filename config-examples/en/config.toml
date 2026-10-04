@@ -1305,7 +1305,13 @@ uglyURLs = false
 
 
     ######################################
-    # Back to Top
+    # Keyboard shortcuts
+    # Alt+X: browse post links on the home page or headings in a post.
+    # Alt+Z: browse next page, previous post, related posts, and back to top.
+    # The shortcut moves focus only; press Enter to open a link.
+    enableKeyboardShortcuts = false
+
+        # Back to Top
 
     enableBackToTop = true
 

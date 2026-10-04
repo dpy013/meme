@@ -12,7 +12,7 @@
         <ul class="post-nav">
             {{ if $next }}
                 <li class="post-nav-prev">
-                    <a href="{{ $next.RelPermalink }}" rel="prev">&lt; {{ (partial "utils/title.html" (dict "$" $next "title" $next.LinkTitle)).htmlTitle }}</a>
+                    <a href="{{ $next.RelPermalink }}" rel="prev"{{ if $.Site.Params.enableKeyboardShortcuts }} data-shortcut="z"{{ end }}>&lt; {{ (partial "utils/title.html" (dict "$" $next "title" $next.LinkTitle)).htmlTitle }}</a>
                 </li>
             {{ end }}
             {{ if $prev }}

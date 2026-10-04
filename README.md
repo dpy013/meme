@@ -102,6 +102,29 @@ If failed, try:
 
 **Note that** MemE makes some brand new features or _breaking changes_ sometimes, so please be sure to check [the modification history of `config.toml`](https://github.com/reuixiy/hugo-theme-meme/commits/master/config-examples) and update the related items after the update!
 
+## Keyboard Navigation and Copying
+
+Enable the optional keyboard navigation in `config.toml`:
+
+```toml
+[params]
+enableKeyboardShortcuts = true
+```
+
+- `Alt + X`: cycles post links on the home page, or headings within an article.
+- `Alt + Z`: cycles the next page, previous post, related posts, and back-to-top control.
+- A shortcut only moves focus; press `Enter` to activate a link.
+- Code blocks and block quotes receive accessible copy buttons when `enableCopy = true`.
+
+## 键盘导航与复制
+
+在 `config.toml` 的 `[params]` 中设置 `enableKeyboardShortcuts = true` 启用可选快捷键：
+
+- `Alt + X`：在首页浏览文章链接，在文章页浏览各级标题。
+- `Alt + Z`：浏览下一页、上一篇文章、相关文章与返回顶部。
+- 快捷键仅移动焦点，按 `Enter` 才会打开链接。
+- 设置 `enableCopy = true` 后，代码块和引用块均提供可键盘操作的复制按钮。
+
 ## Awesome MemE
 
 See [#2](https://github.com/reuixiy/hugo-theme-meme/issues/2).

@@ -1254,7 +1254,13 @@ uglyURLs = false
 
 
     ######################################
-    # 返回頂部按鈕
+    # 鍵盤快速鍵
+    # Alt+X：在首頁瀏覽文章連結，在文章頁瀏覽各級標題。
+    # Alt+Z：瀏覽下一頁、上一篇、相關文章和返回頂部。
+    # 快速鍵只移動焦點，按 Enter 才會開啟連結。
+    enableKeyboardShortcuts = false
+
+        # 返回頂部按鈕
 
     # 是否開啟
     enableBackToTop = true

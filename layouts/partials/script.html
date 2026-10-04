@@ -24,6 +24,10 @@
     {{- $scripts = union $scripts (slice "js/multilingual.js") -}}
 {{- end -}}
 
+{{- if .Site.Params.enableKeyboardShortcuts -}}
+    {{- $scripts = union $scripts (slice "js/keyboard-shortcuts.js") -}}
+{{- end -}}
+
 {{- if .Site.Params.enableCopy -}}
     {{- $scripts = union $scripts (slice "js/copy.js") -}}
 {{- end -}}

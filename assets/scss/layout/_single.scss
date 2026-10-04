@@ -251,6 +251,10 @@ pre {
         .copy-button {
             visibility: hidden;
             opacity: 0;
+            &:focus {
+                visibility: visible;
+                opacity: 1;
+            }
         }
     }
 }

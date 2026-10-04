@@ -1254,7 +1254,13 @@ uglyURLs = false
 
 
     ######################################
-    # 返回顶部按钮
+    # 键盘快捷键
+    # Alt+X：在首页浏览文章链接，在文章页浏览各级标题。
+    # Alt+Z：浏览下一页、上一篇、相关文章和返回顶部。
+    # 快捷键只移动焦点，按 Enter 才会打开链接。
+    enableKeyboardShortcuts = false
+
+        # 返回顶部按钮
 
     # 是否开启
     enableBackToTop = true
