@@ -1311,6 +1311,7 @@ uglyURLs = false
     # Keyboard shortcuts
     # Alt+X: browse post links on the home page or headings in a post.
     # Alt+Z: browse next page, previous post, related posts, and back to top.
+    # Alt+S: focus the local search input when search is enabled.
     # The shortcut moves focus only; press Enter to open a link.
     enableKeyboardShortcuts = false
     # Show the shortcut hint only when it receives Alt+Z focus.

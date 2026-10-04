@@ -212,7 +212,7 @@ other = "8"
 [9]
 other = "9"
 [keyboardShortcutHint]
-other = "Keyboard shortcuts: Alt+X browses posts; Alt+Z browses navigation."
+other = "Keyboard shortcuts: Alt+X browses posts; Alt+Z browses navigation; Alt+S focuses search."
 
 [themeLight]
 other = "light mode"

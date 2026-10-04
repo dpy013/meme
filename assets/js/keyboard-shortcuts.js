@@ -39,6 +39,13 @@ window.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (event) => {
         if (!event.altKey || event.shiftKey || event.ctrlKey || event.metaKey || event.key.length !== 1) return;
         const shortcut = event.key.toLowerCase();
+        if (shortcut === 's') {
+            const searchInput = document.getElementById('search-input');
+            if (!searchInput || searchInput.disabled || searchInput.getAttribute('aria-hidden') === 'true' || !searchInput.getClientRects().length) return;
+            event.preventDefault();
+            searchInput.focus({ preventScroll: false });
+            return;
+        }
         if (shortcut !== 'x' && shortcut !== 'z') return;
 
         const targets = [...document.querySelectorAll(`.shortcut-${shortcut}`)]

@@ -212,7 +212,7 @@ other = "八"
 [9]
 other = "九"
 [keyboardShortcutHint]
-other = "快捷键提示：Alt 加 X 查看文章；Alt 加 Z 浏览导航。"
+other = "快捷键提示：Alt 加 X 查看文章；Alt 加 Z 浏览导航；Alt 加 S 跳转到搜索框。"
 
 [themeLight]
 other = "浅色模式"
