@@ -2,9 +2,10 @@
 {{- $iconName := .iconName | default "search" -}}
 <form id="search" class="search" role="search">
     <label for="search-input">
+        <span class="visually-hidden">{{ i18n "search" }}</span>
         {{- partial "utils/icon.html" (dict "$" $ "name" $iconName "class" "search-icon") -}}
     </label>
-    <input type="search" id="search-input" class="search-input">
+    <input type="search" id="search-input" class="search-input" placeholder="{{ i18n "search" }}">
 </form>
 
 <template id="search-result" hidden>

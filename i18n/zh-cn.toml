@@ -248,3 +248,7 @@ other = "已复制文章链接"
 
 [copyFailed]
 other = "复制失败"
+
+
+[search]
+other = "搜索"

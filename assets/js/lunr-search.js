@@ -71,6 +71,13 @@ window.addEventListener("DOMContentLoaded", event => {
     }
 
     function initIndex() {
+        // CJK text has no spaces; tokenize each Han character while retaining
+        // ordinary Latin words and numbers. This keeps the index local and small.
+        lunr.tokenizer = function(value, metadata) {
+            if (value == null) return [];
+            return (String(value).toLowerCase().match(/[\u3400-\u9fff\uf900-\ufaff]|[a-z0-9]+/gi) || [])
+                .map(token => new lunr.Token(token, metadata));
+        };
         let request = new XMLHttpRequest();
         request.open("GET", "{{ partial "utils/relative-url.html" (dict "$" . "filename" (((.Site.GetPage "").OutputFormats.Get "SearchIndex").RelPermalink | strings.TrimPrefix "/")) }}");
         request.responseType = "json";

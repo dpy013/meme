@@ -13,7 +13,7 @@
         {{- end -}}
         {{- $scripts = union $scripts (slice $srcStemmer) -}}
         {{- $scripts = union $scripts (slice $srcLang) -}}
-    {{- else -}}
+    {{- else if ne $lang "zh" -}}
         {{- warnf "The site language %q isn't supported by lunr, the search results might be suboptimal. Supported languages are: %q" .Site.Language.Lang $supported -}}
     {{- end -}}
 {{- end -}}
