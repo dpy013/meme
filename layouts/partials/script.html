@@ -25,7 +25,7 @@
 {{- end -}}
 
 {{- if .Site.Params.enableKeyboardShortcuts -}}
-    {{- $scripts = union $scripts (slice "js/keyboard-shortcuts.js") -}}
+    {{- $scripts = $scripts | append "js/keyboard-shortcuts.js" -}}
 {{- end -}}
 
 {{- if .Site.Params.enableCopy -}}
