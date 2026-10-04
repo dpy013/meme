@@ -9,7 +9,7 @@ window.addEventListener("DOMContentLoaded", event => {
         if (commentsToggle !== null) {
             commentsToggle.addEventListener('click', function () {
                 loadComments();
-                this.style = "display: none";
+                this.hidden = true;
             });
         }
     {{  end }}

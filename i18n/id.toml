@@ -218,3 +218,7 @@ other = "Diterbitkan"
 
 [readingTime]
 other = "Waktu baca"
+
+
+[skipToContent]
+other = "Lewati ke konten"

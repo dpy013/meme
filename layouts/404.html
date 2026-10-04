@@ -2,8 +2,9 @@
 <html lang="{{ .Site.LanguageCode }}">
     {{ partial "head.html" . }}
     <body>
+        <a class="skip-link" href="#main">{{ i18n "skipToContent" }}</a>
         <div class="container">
-            <main class="fof">
+            <main class="fof" id="main">
                 {{ with or .Site.Params.fofVideoWebm .Site.Params.fofVideoMp4 }}
                 <video poster="{{ $.Site.Params.fofPoster }}" playsinline autoplay muted loop>
                     {{ with $.Site.Params.fofVideoWebm }}

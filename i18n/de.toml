@@ -218,3 +218,7 @@ other = "Veröffentlicht am"
 
 [readingTime]
 other = "Lesezeit"
+
+
+[skipToContent]
+other = "Zum Inhalt springen"

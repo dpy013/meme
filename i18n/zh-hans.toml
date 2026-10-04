@@ -220,3 +220,7 @@ other = "发布时间"
 
 [readingTime]
 other = "阅读时间"
+
+
+[skipToContent]
+other = "跳到正文"

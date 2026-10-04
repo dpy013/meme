@@ -219,3 +219,7 @@ other = "Опубликовано"
 
 [readingTime]
 other = "Время чтения"
+
+
+[skipToContent]
+other = "Перейти к содержанию"

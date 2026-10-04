@@ -218,3 +218,7 @@ other = "Publisert"
 
 [readingTime]
 other = "Lesetid"
+
+
+[skipToContent]
+other = "Hopp til innhold"

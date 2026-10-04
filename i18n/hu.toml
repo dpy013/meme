@@ -218,3 +218,7 @@ other = "Közzétéve"
 
 [readingTime]
 other = "Olvasási idő"
+
+
+[skipToContent]
+other = "Ugrás a tartalomhoz"

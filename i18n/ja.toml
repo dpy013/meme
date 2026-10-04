@@ -218,3 +218,7 @@ other = "公開日"
 
 [readingTime]
 other = "読了時間"
+
+
+[skipToContent]
+other = "本文へ移動"

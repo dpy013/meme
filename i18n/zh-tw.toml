@@ -234,3 +234,7 @@ other = "發布時間"
 
 [readingTime]
 other = "閱讀時間"
+
+
+[skipToContent]
+other = "跳到正文"
