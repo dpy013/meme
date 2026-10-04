@@ -227,3 +227,10 @@ other = "複製程式碼"
 
 [copyQuote]
 other = "複製引用內容"
+
+
+[publishedDate]
+other = "發布時間"
+
+[readingTime]
+other = "閱讀時間"

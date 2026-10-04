@@ -3,7 +3,7 @@
 <div class="post-meta">
     {{ if $.Params.displayPublishedDate | default (and $.Site.Params.displayPublishedDate (not $.PublishDate.IsZero)) }}
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.publishedDateIcon "class" "post-meta-icon") }}
-        <time datetime="{{ $.PublishDate.Format "2006-01-02T15:04:05-07:00" }}" class="post-meta-item published dt-published">{{ $icon }}&nbsp;{{ $.PublishDate.Format $.Site.Params.postMetaDateFormat }}</time>
+        <time datetime="{{ $.PublishDate.Format "2006-01-02T15:04:05-07:00" }}" class="post-meta-item published dt-published">{{ $icon }}&nbsp;{{ i18n "publishedDate" }}&nbsp;{{ $.PublishDate.Format $.Site.Params.postMetaDateFormat }}</time>
     {{ end }}
     {{ if $.Params.displayModifiedDate | default (and $.Site.Params.displayModifiedDate (not $.Lastmod.IsZero)) }}
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.modifiedDateIcon "class" "post-meta-icon") }}
@@ -74,7 +74,7 @@
     {{ end }}
     {{ if $.Params.displayReadingTime | default $.Site.Params.displayReadingTime }}
         {{ $icon := partial "utils/icon.html" (dict "$" $ "name" $.Site.Params.readingTimeIcon "class" "post-meta-icon") }}
-        <span class="post-meta-item reading-time">{{ $icon }}&nbsp;{{ $.ReadingTime }}&nbsp;{{ i18n "minute" $.ReadingTime }}</span>
+        <span class="post-meta-item reading-time">{{ $icon }}&nbsp;{{ i18n "readingTime" }}&nbsp;{{ $.ReadingTime }}&nbsp;{{ i18n "minute" $.ReadingTime }}</span>
     {{ end }}
     {{ if and ($.Params.displayBusuanziPagePV | default $.Site.Params.displayBusuanziPagePV) (eq hugo.Environment "production") }}
         {{ if not $isHome }}

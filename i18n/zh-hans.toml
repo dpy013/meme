@@ -213,3 +213,10 @@ other = "八"
 
 [9]
 other = "九"
+
+
+[publishedDate]
+other = "发布时间"
+
+[readingTime]
+other = "阅读时间"

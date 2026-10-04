@@ -211,3 +211,10 @@ other = "8"
 
 [9]
 other = "9"
+
+
+[publishedDate]
+other = "Opublikowano"
+
+[readingTime]
+other = "Czas czytania"

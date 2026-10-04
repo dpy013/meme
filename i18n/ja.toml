@@ -211,3 +211,10 @@ other = "8"
 
 [9]
 other = "9"
+
+
+[publishedDate]
+other = "公開日"
+
+[readingTime]
+other = "読了時間"

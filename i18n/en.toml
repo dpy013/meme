@@ -227,3 +227,10 @@ other = "Copy code"
 
 [copyQuote]
 other = "Copy quote"
+
+
+[publishedDate]
+other = "Published"
+
+[readingTime]
+other = "Reading time"

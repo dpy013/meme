@@ -212,3 +212,10 @@ other = "8"
 [9]
 other = "9"
 
+
+
+[publishedDate]
+other = "Опубликовано"
+
+[readingTime]
+other = "Время чтения"
