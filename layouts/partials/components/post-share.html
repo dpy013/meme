@@ -32,6 +32,12 @@
         {{ end }}
 
         <div class="share-items">
+            {{ if .Site.Params.enableCopyLink }}
+                <div class="share-item copy-link">
+                    <button type="button" class="copy-link-button" data-copy-link="{{ .Permalink }}" data-copy-label="{{ i18n "copyLink" }}" data-copied-label="{{ i18n "copiedLink" }}" data-copy-failed-label="{{ i18n "copyFailed" }}" aria-label="{{ i18n "copyLink" }}" title="{{ i18n "copyLink" }}">{{ i18n "copyLink" }}</button>
+                </div>
+            {{ end }}
+
 
             {{ $ := . }}
             {{ range .Site.Params.postShareItems | default (slice "facebook" "mastodon" "fediverse" "x") }}

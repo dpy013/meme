@@ -36,6 +36,10 @@
     {{- $scripts = union $scripts (slice "js/comments.js") -}}
 {{- end -}}
 
+{{- if and .Site.Params.enablePostShare .Site.Params.enableCopyLink -}}
+    {{- $scripts = $scripts | append "js/post-share.js" -}}
+{{- end -}}
+
 {{- if .Site.Params.enableLunrSearch -}}
     {{- $scripts = union $scripts (partial "third-party/lunr-search.html" .) -}}
 {{- end -}}

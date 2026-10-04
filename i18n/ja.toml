@@ -222,3 +222,13 @@ other = "読了時間"
 
 [skipToContent]
 other = "本文へ移動"
+
+
+[copyLink]
+other = "リンクをコピー"
+
+[copiedLink]
+other = "リンクをコピーしました"
+
+[copyFailed]
+other = "コピーに失敗しました"

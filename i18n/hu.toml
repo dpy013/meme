@@ -222,3 +222,13 @@ other = "Olvasási idő"
 
 [skipToContent]
 other = "Ugrás a tartalomhoz"
+
+
+[copyLink]
+other = "Hivatkozás másolása"
+
+[copiedLink]
+other = "Hivatkozás másolva"
+
+[copyFailed]
+other = "Másolás sikertelen"

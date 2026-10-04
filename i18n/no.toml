@@ -222,3 +222,13 @@ other = "Lesetid"
 
 [skipToContent]
 other = "Hopp til innhold"
+
+
+[copyLink]
+other = "Kopier lenke"
+
+[copiedLink]
+other = "Lenken er kopiert"
+
+[copyFailed]
+other = "Kopiering feilet"

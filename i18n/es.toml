@@ -222,3 +222,13 @@ other = "Tiempo de lectura"
 
 [skipToContent]
 other = "Saltar al contenido"
+
+
+[copyLink]
+other = "Copiar enlace"
+
+[copiedLink]
+other = "Enlace copiado"
+
+[copyFailed]
+other = "Error al copiar"

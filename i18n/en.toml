@@ -238,3 +238,13 @@ other = "Reading time"
 
 [skipToContent]
 other = "Skip to content"
+
+
+[copyLink]
+other = "Copy link"
+
+[copiedLink]
+other = "Link copied"
+
+[copyFailed]
+other = "Copy failed"

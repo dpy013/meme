@@ -223,3 +223,13 @@ other = "Время чтения"
 
 [skipToContent]
 other = "Перейти к содержанию"
+
+
+[copyLink]
+other = "Копировать ссылку"
+
+[copiedLink]
+other = "Ссылка скопирована"
+
+[copyFailed]
+other = "Не удалось скопировать"

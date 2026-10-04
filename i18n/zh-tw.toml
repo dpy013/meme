@@ -238,3 +238,13 @@ other = "閱讀時間"
 
 [skipToContent]
 other = "跳到正文"
+
+
+[copyLink]
+other = "複製文章連結"
+
+[copiedLink]
+other = "已複製文章連結"
+
+[copyFailed]
+other = "複製失敗"

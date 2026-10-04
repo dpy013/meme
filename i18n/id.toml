@@ -222,3 +222,13 @@ other = "Waktu baca"
 
 [skipToContent]
 other = "Lewati ke konten"
+
+
+[copyLink]
+other = "Salin tautan"
+
+[copiedLink]
+other = "Tautan disalin"
+
+[copyFailed]
+other = "Gagal menyalin"
