@@ -24,6 +24,9 @@
                 {{ end }}
             </article>
         {{ end }}
+        {{ if and .Site.Params.enableKeyboardShortcuts .Site.Params.displayKeyboardShortcutHint }}
+            <div class="shortcut-hint" tabindex="-1" data-shortcut="z" aria-label="{{ i18n "keyboardShortcutHint" }}"></div>
+        {{ end }}
         {{ if or $paginator.HasPrev $paginator.HasNext }}
             <ul class="pagination">
                 {{ if $paginator.HasPrev }}

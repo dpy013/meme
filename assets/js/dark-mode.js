@@ -135,6 +135,18 @@ function cycleTheme() {
 }
 
 function updateThemeIcons(preference) {
+    const themeSwitcher = document.getElementById('theme-switcher');
+    if (themeSwitcher) {
+        const names = {
+            light: '{{ i18n "themeLight" }}',
+            dark: '{{ i18n "themeDark" }}',
+            system: '{{ i18n "themeSystem" }}',
+        };
+        const label = '{{ i18n "themeSwitcher" }}，当前为' + (names[preference] || names.system);
+        themeSwitcher.setAttribute('aria-label', label);
+        themeSwitcher.setAttribute('title', label);
+    }
+
     // Hide all icons first
     const icons = document.querySelectorAll('.theme-icon-light, .theme-icon-dark, .theme-icon-system');
     icons.forEach(icon => icon.style.display = 'none');

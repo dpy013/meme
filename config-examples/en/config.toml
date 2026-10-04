@@ -1310,6 +1310,8 @@ uglyURLs = false
     # Alt+Z: browse next page, previous post, related posts, and back to top.
     # The shortcut moves focus only; press Enter to open a link.
     enableKeyboardShortcuts = false
+    # Show the shortcut hint only when it receives Alt+Z focus.
+    displayKeyboardShortcutHint = false
 
         # Back to Top
 

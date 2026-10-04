@@ -109,16 +109,18 @@ Enable the optional keyboard navigation in `config.toml`:
 ```toml
 [params]
 enableKeyboardShortcuts = true
+displayKeyboardShortcutHint = false
 ```
 
 - `Alt + X`: cycles post links on the home page, or headings within an article.
 - `Alt + Z`: cycles the next page, previous post, related posts, and back-to-top control.
 - A shortcut only moves focus; press `Enter` to activate a link.
+- Set `displayKeyboardShortcutHint = true` to show an unobtrusive home-page hint only when it receives `Alt + Z` focus.
 - Code blocks and block quotes receive accessible copy buttons when `enableCopy = true`.
 
 ## 键盘导航与复制
 
-在 `config.toml` 的 `[params]` 中设置 `enableKeyboardShortcuts = true` 启用可选快捷键：
+在 `config.toml` 的 `[params]` 中设置 `enableKeyboardShortcuts = true` 启用可选快捷键；设置 `displayKeyboardShortcutHint = true` 后，首页提示仅在 `Alt + Z` 聚焦时显示：
 
 - `Alt + X`：在首页浏览文章链接，在文章页浏览各级标题。
 - `Alt + Z`：浏览下一页、上一篇文章、相关文章与返回顶部。

@@ -1,0 +1,30 @@
+.shortcut-hint {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+
+    &:focus {
+        position: fixed;
+        z-index: 10;
+        top: 1rem;
+        right: 1rem;
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0.5rem 0.75rem;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+        color: var(--color-contrast-high);
+        background: var(--color-bg);
+        border: 1px solid var(--color-primary);
+        border-radius: 0.25rem;
+        box-shadow: 0 0.25rem 1rem hsla(var(--color-contrast-high-h), var(--color-contrast-high-s), var(--color-contrast-high-l), 0.2);
+    }
+}

@@ -211,3 +211,14 @@ other = "八"
 
 [9]
 other = "九"
+[keyboardShortcutHint]
+other = "快速鍵提示：Alt 加 X 瀏覽文章；Alt 加 Z 瀏覽導覽。"
+
+[themeLight]
+other = "淺色模式"
+
+[themeDark]
+other = "深色模式"
+
+[themeSystem]
+other = "跟隨系統"

@@ -1259,6 +1259,8 @@ uglyURLs = false
     # Alt+Z：瀏覽下一頁、上一篇、相關文章和返回頂部。
     # 快速鍵只移動焦點，按 Enter 才會開啟連結。
     enableKeyboardShortcuts = false
+    # 僅在透過 Alt+Z 取得焦點時顯示快速鍵提示。
+    displayKeyboardShortcutHint = false
 
         # 返回頂部按鈕
 

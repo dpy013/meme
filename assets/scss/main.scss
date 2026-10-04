@@ -344,6 +344,10 @@ $baseRelURL: "{{ "" | relURL | strings.TrimSuffix "/" }}";
     @import "components/related-posts";
 {{ end }}
 
+{{ if and .Site.Params.enableKeyboardShortcuts .Site.Params.displayKeyboardShortcutHint }}
+    @import "components/keyboard-shortcuts";
+{{ end }}
+
 {{ if .Site.Params.enablePostTags }}
     @import "components/post-tags";
 {{ end }}
