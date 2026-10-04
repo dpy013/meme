@@ -222,3 +222,8 @@ other = "深色模式"
 
 [themeSystem]
 other = "跟隨系統"
+[copyCode]
+other = "複製程式碼"
+
+[copyQuote]
+other = "複製引用內容"

@@ -3,6 +3,8 @@
 window.addEventListener("DOMContentLoaded", () => {
     const copyText = '{{ i18n "copy" }}';
     const copiedText = '{{ i18n "copied" }}';
+    const copyCodeText = '{{ i18n "copyCode" }}';
+    const copyQuoteText = '{{ i18n "copyQuote" }}';
 
     document.querySelectorAll('.post-body > pre').forEach((pre) => {
         const wrapper = document.createElement('div');
@@ -25,7 +27,7 @@ window.addEventListener("DOMContentLoaded", () => {
             button.className = 'copy-button';
             button.type = 'button';
             button.innerText = copyText;
-            button.setAttribute('aria-label', target.matches('blockquote') ? 'Copy quote' : 'Copy code');
+            button.setAttribute('aria-label', target.matches('blockquote') ? copyQuoteText : copyCodeText);
             button.title = button.getAttribute('aria-label');
 
             button.addEventListener('click', () => {

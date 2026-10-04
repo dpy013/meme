@@ -222,3 +222,8 @@ other = "dark mode"
 
 [themeSystem]
 other = "system setting"
+[copyCode]
+other = "Copy code"
+
+[copyQuote]
+other = "Copy quote"
