@@ -6,6 +6,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
@@ -20,6 +23,8 @@ jobs:
           mv content/post content/posts
           sed -i 's/posts/post/g' content/posts/_index.md
           mkdir content/about && mv content/about.md content/about/_index.md
+          # Hugo 0.156 removed this legacy shortcode from the pinned fixture.
+          sed -i '/{{< twitter_simple /d' content/posts/rich-content.md
           mkdir -p themes/meme
 
       - name: 'Check out MemE into themes/meme folder'
