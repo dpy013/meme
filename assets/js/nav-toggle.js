@@ -1,99 +1,56 @@
-window.addEventListener("DOMContentLoaded", event => {
-    // Create nav toggle icon
+window.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".nav-toggle");
+    const header = document.querySelector(".header");
+    const curtain = document.querySelector(".nav-curtain");
+    const menu = document.getElementById("menu");
 
-    const navToggleLabel = document.querySelector('.nav-toggle');
-    const navToggleLabelInner = document.createElement('div');
+    if (!button || !header || !curtain || !menu) return;
 
-    navToggleLabelInner.className = 'nav-toggle-inner';
-    navToggleLabel.appendChild(navToggleLabelInner);
+    const close = ({ restoreFocus = false, immediate = false } = {}) => {
+        if (button.getAttribute("aria-expanded") !== "true") return;
 
-    for (let i = 0; i < 3; i++) {
-        const span = document.createElement('span');
+        button.setAttribute("aria-expanded", "false");
+        button.setAttribute("aria-label", button.dataset.openLabel);
+        button.classList.remove("open");
+        header.classList.remove("open");
 
-        navToggleLabelInner.appendChild(span);
-    }
-
-
-    // Main function
-
-    const navToggle = document.getElementById('nav-toggle');
-    const header = document.querySelector('.header');
-    const navCurtain = document.querySelector('.nav-curtain');
-
-    navToggle.addEventListener('change', (e) => {
-        if (e.target.checked) {
-            header.classList.add('open');
-            navToggleLabel.classList.add('open');
-
-            header.classList.remove('fade');
-
-            navCurtain.style = 'display: block';
+        if (immediate) {
+            header.classList.remove("fade");
+            curtain.removeAttribute("style");
         } else {
-            header.classList.remove('open');
-            navToggleLabel.classList.remove('open');
-
-            header.classList.add('fade');
-
-            // Cannot remove `display: block` immediately, or CSS animation
-            // will failed. The workaround is down below.
-
-            // navCurtain.removeAttribute('style');
+            header.classList.add("fade");
         }
+
+        if (restoreFocus) button.focus();
+    };
+
+    const open = () => {
+        button.setAttribute("aria-expanded", "true");
+        button.setAttribute("aria-label", button.dataset.closeLabel);
+        button.classList.add("open");
+        header.classList.remove("fade");
+        header.classList.add("open");
+        curtain.style.display = "block";
+    };
+
+    button.addEventListener("click", () => {
+        button.getAttribute("aria-expanded") === "true" ? close() : open();
+    });
+    curtain.addEventListener("click", () => close({ restoreFocus: true }));
+    curtain.addEventListener("animationend", () => {
+        if (button.getAttribute("aria-expanded") === "false") curtain.removeAttribute("style");
+    });
+    menu.addEventListener("click", event => {
+        if (event.target.closest("a")) close({ immediate: true });
+    });
+    document.addEventListener("keydown", event => {
+        if (event.key === "Escape") close({ restoreFocus: true });
     });
 
-
-    // Fix animation failed caused by removing `display: block`
-
-    navCurtain.addEventListener('animationend', (e) => {
-        if (!navToggle.checked) {
-            e.target.removeAttribute('style');
-        }
+    const maxWidth = getComputedStyle(document.documentElement).getPropertyValue("--max-width");
+    const mediaQuery = matchMedia(`(max-width: ${maxWidth})`);
+    mediaQuery.addEventListener("change", event => {
+        if (!event.matches) close({ immediate: true });
     });
-
-
-    window.addEventListener(
-        'scroll',
-        throttle(function() {
-            // Close nav when window is scrolled by user
-            checkInput();
-        }, delayTime)
-    );
-
-
-    const maxWidth = window.getComputedStyle(document.documentElement, null).getPropertyValue('--max-width');
-    let mediaQuery = window.matchMedia(`(max-width: ${maxWidth})`);
-
-    mediaQuery.addListener(e => {
-        if (!e.matches) {
-            // We are no longer in responsive mode, close nav
-            closeNav(true);
-        }
-    });
-
-
-    function checkInput() {
-        // https://github.com/reuixiy/hugo-theme-meme/issues/171
-        const input = document.getElementById('search-input');
-        if (input && input === document.activeElement) {
-            return;
-        }
-
-        closeNav();
-    }
-
-    function closeNav(noFade) {
-        if (navToggle.checked) {
-            navToggle.checked = false;
-
-            header.classList.remove('open');
-            navToggleLabel.classList.remove('open');
-
-            if (noFade) {
-                navCurtain.removeAttribute("style");
-            }
-            else {
-                header.classList.add('fade');
-            }
-        }
-    }
-}, {once: true});
+    window.addEventListener("scroll", () => close(), { passive: true });
+}, { once: true });

@@ -248,3 +248,9 @@ other = "Link copied"
 
 [copyFailed]
 other = "Copy failed"
+
+[openNavigation]
+other = "Open navigation menu"
+
+[closeNavigation]
+other = "Close navigation menu"

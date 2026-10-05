@@ -1,5 +1,6 @@
 {{ if .Site.Params.enableNavToggle }}
-    <input type="checkbox" id="nav-toggle" aria-hidden="true" />
-    <label for="nav-toggle" class="nav-toggle"></label>
-    <label for="nav-toggle" class="nav-curtain"></label>
+    <button class="nav-toggle" type="button" aria-controls="menu" aria-expanded="false" aria-label="{{ i18n "openNavigation" }}" data-open-label="{{ i18n "openNavigation" }}" data-close-label="{{ i18n "closeNavigation" }}">
+        <span class="nav-toggle-inner" aria-hidden="true"><span></span><span></span><span></span></span>
+    </button>
+    <div class="nav-curtain" aria-hidden="true"></div>
 {{ end }}
